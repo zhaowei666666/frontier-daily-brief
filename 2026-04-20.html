@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>每日前沿摘要 2026-04-20</title>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap");
     :root {
       --bg: #ede7da;
       --paper: #fbf8f1;
@@ -16,13 +17,18 @@
       --accent-soft: rgba(11, 114, 103, 0.12);
       --accent-strong: #004d45;
       --shadow: 0 24px 70px rgba(21, 32, 38, 0.08);
+      --font-body: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+      --font-display: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --font-ui: "IBM Plex Sans", "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
-      font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", serif;
+      font-family: var(--font-body);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
       background:
         radial-gradient(circle at 10% 0%, rgba(11, 114, 103, 0.14), transparent 24%),
         linear-gradient(180deg, #ece4d5 0%, #f4efe6 36%, #eee7da 100%);
@@ -59,7 +65,7 @@
       display: inline-flex;
       gap: 8px;
       align-items: center;
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -76,18 +82,18 @@
       position: relative;
       z-index: 1;
       margin: 14px 0 10px;
-      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-      font-weight: 700;
-      font-size: clamp(29px, 8.8vw, 50px);
-      line-height: 1.04;
-      letter-spacing: -0.03em;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(30px, 8.6vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
       max-width: 7.4em;
       text-wrap: balance;
     }
     .hero-date {
       position: relative;
       z-index: 1;
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -108,10 +114,11 @@
       z-index: 1;
       margin-top: 18px;
       max-width: 18em;
-      font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", serif;
-      font-size: clamp(19px, 5.4vw, 30px);
-      line-height: 1.46;
-      letter-spacing: 0.01em;
+      font-family: var(--font-body);
+      font-size: clamp(19px, 5.4vw, 31px);
+      font-weight: 600;
+      line-height: 1.52;
+      letter-spacing: 0.015em;
       color: rgba(21, 32, 38, 0.88);
       text-wrap: balance;
     }
@@ -148,7 +155,7 @@
       border: 1px solid rgba(21, 32, 38, 0.08);
       color: var(--accent-strong);
       text-decoration: none;
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 13px;
       font-weight: 600;
       line-height: 1;
@@ -174,7 +181,7 @@
       margin-bottom: 14px;
     }
     .chapter-kicker {
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 11px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -186,11 +193,11 @@
     .closing-head h2,
     .archive-head h2 {
       margin: 0;
-      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-weight: 800;
       font-size: clamp(24px, 6vw, 34px);
       line-height: 1.12;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
       text-wrap: balance;
     }
     .overview {
@@ -230,7 +237,7 @@
       place-items: center;
       background: var(--accent-soft);
       color: var(--accent);
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 12px;
       font-weight: 700;
       flex: 0 0 auto;
@@ -242,7 +249,7 @@
       flex: 0 0 auto;
     }
     .story-kicker {
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -250,12 +257,13 @@
     }
     .story h3 {
       margin: 0 0 14px;
-      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-      font-weight: 700;
-      font-size: clamp(24px, 6.2vw, 33px);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(24px, 6vw, 34px);
       line-height: 1.24;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.045em;
       text-wrap: balance;
+      max-width: 10.5em;
     }
     .story-body {
       display: grid;
@@ -272,7 +280,7 @@
       padding-bottom: 0;
     }
     .field-label {
-      font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+      font-family: var(--font-ui);
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -374,7 +382,7 @@
         line-height: 2.02;
       }
       .story h3 {
-        font-size: clamp(23px, 6.6vw, 29px);
+        font-size: clamp(23px, 6.1vw, 29px);
       }
       .field-content,
       .closing li,
