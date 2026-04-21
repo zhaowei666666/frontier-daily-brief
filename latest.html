@@ -5,21 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>每日前沿摘要 2026-04-20</title>
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap");
     :root {
-      --bg: #ede7da;
-      --paper: #fbf8f1;
-      --paper-strong: #fffdf8;
-      --ink: #152026;
-      --muted: #59656c;
-      --line: rgba(21, 32, 38, 0.11);
-      --accent: #0b7267;
-      --accent-soft: rgba(11, 114, 103, 0.12);
-      --accent-strong: #004d45;
-      --shadow: 0 24px 70px rgba(21, 32, 38, 0.08);
-      --font-body: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
-      --font-display: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      --font-ui: "IBM Plex Sans", "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --bg: #efe7db;
+      --paper: #fcfaf5;
+      --panel: #f6efe2;
+      --ink: #182128;
+      --muted: #5d666c;
+      --line: rgba(24, 33, 40, 0.11);
+      --accent: #0f6d66;
+      --accent-deep: #0a4f49;
+      --accent-soft: rgba(15, 109, 102, 0.10);
+      --shadow: 0 26px 78px rgba(24, 33, 40, 0.10);
+      --font-body: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
+      --font-title: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+      --font-ui: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -30,34 +29,35 @@
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       background:
-        radial-gradient(circle at 10% 0%, rgba(11, 114, 103, 0.14), transparent 24%),
-        linear-gradient(180deg, #ece4d5 0%, #f4efe6 36%, #eee7da 100%);
+        radial-gradient(circle at 12% 0%, rgba(15,109,102,0.12), transparent 22%),
+        linear-gradient(180deg, #ebdfcb 0%, #f3ecdf 38%, #ece3d6 100%);
     }
     .page {
-      width: min(100%, 860px);
+      width: min(100%, 920px);
       margin: 0 auto;
-      padding: 0 12px 28px;
+      padding: 0 12px 34px;
     }
     .hero {
       margin: 0 -12px;
-      padding: max(18px, env(safe-area-inset-top, 0px) + 14px) 16px 18px;
+      padding: max(20px, env(safe-area-inset-top, 0px) + 16px) 16px 22px;
       background:
-        linear-gradient(160deg, rgba(11, 114, 103, 0.18), rgba(255, 247, 232, 0.86)),
-        linear-gradient(180deg, rgba(255,255,255,0.4), transparent 60%);
-      border-bottom: 1px solid rgba(255,255,255,0.5);
+        radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 26%),
+        linear-gradient(150deg, #132028 0%, #1f3438 58%, #27453f 100%);
+      color: #f8f2e6;
       position: relative;
       overflow: hidden;
     }
     .hero::after {
       content: "";
       position: absolute;
-      right: -82px;
-      top: -58px;
+      top: -40px;
+      right: -64px;
       width: 220px;
       height: 220px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.28);
-      filter: blur(14px);
+      border-radius: 32px;
+      transform: rotate(18deg);
+      background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
     }
     .eyebrow {
       position: relative;
@@ -69,57 +69,47 @@
       font-size: 11px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: rgba(248, 242, 230, 0.84);
     }
     .eyebrow::before {
       content: "";
       width: 24px;
       height: 1px;
       background: currentColor;
-      opacity: 0.8;
+      opacity: 0.78;
     }
     .hero h1 {
       position: relative;
       z-index: 1;
-      margin: 14px 0 10px;
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(30px, 8.6vw, 52px);
+      margin: 16px 0 10px;
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: clamp(30px, 8.8vw, 56px);
       line-height: 1.02;
-      letter-spacing: -0.045em;
-      max-width: 7.4em;
+      letter-spacing: -0.05em;
+      max-width: 7.2em;
       text-wrap: balance;
     }
     .hero-date {
       position: relative;
       z-index: 1;
+      margin-bottom: 14px;
       font-family: var(--font-ui);
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(21, 32, 38, 0.72);
-      margin-bottom: 12px;
-    }
-    .hero p {
-      position: relative;
-      z-index: 1;
-      margin: 0 0 10px;
-      max-width: 31rem;
-      font-size: 14px;
-      line-height: 1.78;
-      color: var(--muted);
+      color: rgba(248, 242, 230, 0.62);
     }
     .hero-quote {
       position: relative;
       z-index: 1;
-      margin-top: 18px;
       max-width: 18em;
-      font-family: var(--font-body);
-      font-size: clamp(19px, 5.4vw, 31px);
-      font-weight: 600;
-      line-height: 1.52;
+      margin-top: 16px;
+      font-size: clamp(20px, 5.6vw, 31px);
+      line-height: 1.6;
       letter-spacing: 0.015em;
-      color: rgba(21, 32, 38, 0.88);
+      font-weight: 600;
+      color: rgba(233, 222, 201, 0.94);
       text-wrap: balance;
     }
     .hero-quote::before {
@@ -128,7 +118,7 @@
       margin-bottom: 2px;
       font-size: 1.3em;
       line-height: 0.7;
-      color: rgba(11, 114, 103, 0.55);
+      color: rgba(233, 222, 201, 0.38);
     }
     .jumpbar {
       position: sticky;
@@ -136,11 +126,11 @@
       z-index: 6;
       margin: 12px -4px 14px;
       padding: 10px 4px 8px;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(180deg, rgba(244, 239, 230, 0.92), rgba(244, 239, 230, 0.78));
-      border-bottom: 1px solid rgba(21, 32, 38, 0.08);
       overflow-x: auto;
       white-space: nowrap;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, rgba(244, 238, 227, 0.94), rgba(244, 238, 227, 0.82));
+      border-bottom: 1px solid rgba(24, 33, 40, 0.08);
     }
     .jumpbar::-webkit-scrollbar {
       display: none;
@@ -149,56 +139,62 @@
       display: inline-flex;
       align-items: center;
       margin-right: 8px;
-      padding: 10px 14px;
+      padding: 10px 15px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(21, 32, 38, 0.08);
-      color: var(--accent-strong);
+      background: rgba(255,255,255,0.84);
+      border: 1px solid rgba(24, 33, 40, 0.08);
+      box-shadow: 0 10px 26px rgba(24, 33, 40, 0.05);
+      color: var(--accent-deep);
       text-decoration: none;
       font-family: var(--font-ui);
       font-size: 13px;
       font-weight: 600;
-      line-height: 1;
-      box-shadow: 0 10px 30px rgba(21, 32, 38, 0.05);
     }
     .sheet {
-      background: rgba(251, 248, 241, 0.92);
-      border: 1px solid rgba(21, 32, 38, 0.08);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
       overflow: hidden;
+      border-radius: 30px;
+      background: rgba(252, 250, 245, 0.94);
+      border: 1px solid rgba(24, 33, 40, 0.08);
+      box-shadow: var(--shadow);
     }
-    .section-block {
-      padding: 22px 16px;
+    .section,
+    .chapter,
+    .closing,
+    .archive {
+      padding: 24px 16px;
     }
-    .section-block + .section-block {
+    .section + .chapter,
+    .chapter + .chapter,
+    .chapter + .closing,
+    .closing + .closing,
+    .closing + .archive {
       border-top: 1px solid var(--line);
     }
-    .section-head,
-    .chapter-head,
-    .closing-head,
-    .archive-head {
-      margin-bottom: 14px;
-    }
     .chapter-kicker {
+      margin-bottom: 10px;
       font-family: var(--font-ui);
       font-size: 11px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 8px;
     }
-    .section-block h2,
-    .chapter-head h2,
-    .closing-head h2,
-    .archive-head h2 {
+    .section h2,
+    .chapter h2,
+    .closing h2,
+    .archive h2 {
       margin: 0;
-      font-family: var(--font-display);
-      font-weight: 800;
+      font-family: var(--font-title);
       font-size: clamp(24px, 6vw, 34px);
+      font-weight: 800;
       line-height: 1.12;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
       text-wrap: balance;
+    }
+    .section-head,
+    .chapter-head,
+    .closing-head,
+    .archive-head {
+      margin-bottom: 16px;
     }
     .overview {
       font-size: 17px;
@@ -210,18 +206,12 @@
     .overview p:last-child {
       margin-bottom: 0;
     }
-    .chapter {
-      padding: 22px 16px 8px;
-    }
-    .chapter + .chapter {
-      border-top: 1px solid var(--line);
-    }
     .chapter-stories {
       display: grid;
-      gap: 20px;
+      gap: 24px;
     }
     .story {
-      padding-top: 6px;
+      padding-top: 8px;
     }
     .story-topline {
       display: flex;
@@ -230,8 +220,8 @@
       margin-bottom: 10px;
     }
     .story-index {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 999px;
       display: inline-grid;
       place-items: center;
@@ -242,42 +232,33 @@
       font-weight: 700;
       flex: 0 0 auto;
     }
-    .story-divider {
-      width: 24px;
+    .story-rule {
+      width: 28px;
       height: 1px;
-      background: rgba(11, 114, 103, 0.36);
+      background: rgba(15, 109, 102, 0.38);
       flex: 0 0 auto;
-    }
-    .story-kicker {
-      font-family: var(--font-ui);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(11, 114, 103, 0.75);
     }
     .story h3 {
       margin: 0 0 14px;
-      font-family: var(--font-display);
-      font-weight: 800;
+      max-width: 10.2em;
+      font-family: var(--font-title);
       font-size: clamp(24px, 6vw, 34px);
+      font-weight: 800;
       line-height: 1.24;
       letter-spacing: -0.045em;
       text-wrap: balance;
-      max-width: 10.5em;
     }
     .story-body {
       display: grid;
-      gap: 20px;
+      gap: 18px;
     }
     .field {
       display: grid;
       gap: 10px;
-      padding-bottom: 18px;
-      border-bottom: 1px dashed rgba(21, 32, 38, 0.11);
-    }
-    .field:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+      padding: 14px 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.62), rgba(245, 238, 226, 0.76));
+      border: 1px solid rgba(24, 33, 40, 0.08);
     }
     .field-label {
       font-family: var(--font-ui);
@@ -288,7 +269,7 @@
     }
     .field-content {
       font-size: 16px;
-      line-height: 2.06;
+      line-height: 2.05;
       color: var(--ink);
     }
     .field-content p {
@@ -297,25 +278,21 @@
     .field-content p:last-child {
       margin-bottom: 0;
     }
+    .field-content a,
+    .archive a {
+      color: var(--accent);
+      text-underline-offset: 0.15em;
+    }
+    .field-content code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      background: rgba(24, 33, 40, 0.08);
+      padding: 0.14em 0.35em;
+      border-radius: 7px;
+      font-size: 0.92em;
+    }
     .field-source .field-content {
       color: var(--muted);
       font-size: 15px;
-    }
-    .field-content a {
-      color: var(--accent);
-      text-underline-offset: 0.14em;
-    }
-    .field-content code {
-      font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-      background: rgba(21, 32, 38, 0.08);
-      padding: 0.14em 0.34em;
-      border-radius: 7px;
-      font-size: 0.9em;
-    }
-    .closing,
-    .archive {
-      padding: 22px 16px;
-      border-top: 1px solid var(--line);
     }
     .closing ol,
     .archive ul {
@@ -326,62 +303,49 @@
     .archive li {
       margin-bottom: 12px;
       font-size: 16px;
-      line-height: 1.9;
-    }
-    .archive a {
-      color: var(--accent);
-      text-underline-offset: 0.14em;
+      line-height: 1.95;
     }
     @media (min-width: 900px) {
-      body {
-        background:
-          radial-gradient(circle at 12% 0%, rgba(11, 114, 103, 0.14), transparent 20%),
-          linear-gradient(180deg, #ece4d5 0%, #f4efe6 32%, #efe8dc 100%);
-      }
       .page {
-        padding: 18px 20px 34px;
+        padding: 14px 20px 38px;
       }
       .hero {
-        margin: 18px 0 0;
-        border-radius: 30px;
-        padding: 30px 26px 28px;
+        margin: 0;
+        border-radius: 34px;
+        padding: 34px 28px 30px;
       }
       .jumpbar {
         margin: 14px 0 16px;
-        border-radius: 18px;
         padding: 12px 14px;
+        border-radius: 18px;
       }
       .sheet {
-        border-radius: 30px;
+        border-radius: 34px;
       }
-      .section-block,
+      .section,
       .chapter,
       .closing,
       .archive {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 26px;
+        padding-right: 26px;
       }
     }
     @media (max-width: 720px) {
       .hero h1 {
-        font-size: clamp(28px, 8vw, 40px);
-        max-width: 8.5em;
-      }
-      .hero p {
-        font-size: 13px;
-        line-height: 1.72;
+        font-size: clamp(28px, 8vw, 42px);
+        max-width: 8.4em;
       }
       .hero-quote {
-        margin-top: 16px;
-        font-size: clamp(18px, 5.8vw, 24px);
-        line-height: 1.5;
         max-width: 100%;
+        font-size: clamp(18px, 5.8vw, 25px);
+        line-height: 1.56;
       }
       .overview {
         font-size: 16px;
         line-height: 2.02;
       }
       .story h3 {
+        max-width: 100%;
         font-size: clamp(23px, 6.1vw, 29px);
       }
       .field-content,
@@ -407,14 +371,12 @@
     </nav>
 
     <main class="sheet">
-      <section class="section-block" id="overview">
+      <section class="section" id="overview">
         <header class="section-head">
           <div class="chapter-kicker">Overview</div>
           <h2>今日总览</h2>
         </header>
-        <div class="overview">
-          <p>按北京时间 <code>2026年4月20日</code> 这一天的权威一手来源来看，真正值得写进简报的，不是热闹的产品营销，而是几项已经通过同行评审、正式在线披露的硬核研究。科技前沿这边，量子系统开始把“无序”和“缺陷”从麻烦变成可利用对象，超薄光学器件向系统级压缩迈进，钙钛矿光伏则继续逼近更现实的效率与稳定性门槛。环境与材料交叉这边，信号同样清晰：未来竞争力不只来自做出“更活跃的材料”，还来自把界面电化学、器件空间效率、全生命周期碳核算三件事同时做好。今天更像一份研究雷达，而不是新闻热榜。</p>
-        </div>
+        <div class="overview"><p>按北京时间 <code>2026年4月20日</code> 这一天的权威一手来源来看，真正值得写进简报的，不是热闹的产品营销，而是几项已经通过同行评审、正式在线披露的硬核研究。科技前沿这边，量子系统开始把“无序”和“缺陷”从麻烦变成可利用对象，超薄光学器件向系统级压缩迈进，钙钛矿光伏则继续逼近更现实的效率与稳定性门槛。环境与材料交叉这边，信号同样清晰：未来竞争力不只来自做出“更活跃的材料”，还来自把界面电化学、器件空间效率、全生命周期碳核算三件事同时做好。今天更像一份研究雷达，而不是新闻热榜。</p></div>
       </section>
 
       <section class="chapter" id="板块一-科技前沿爆炸性事件">
@@ -422,16 +384,13 @@
       <div class="chapter-kicker">Section</div>
       <h2>板块一：科技前沿爆炸性事件</h2>
     </header>
-    <div class="chapter-stories">
-      <article class="story" id="story-1">
+    <div class="chapter-stories"><article class="story" id="story-1">
     <div class="story-topline">
       <span class="story-index">01</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>无序里长出的拓扑相：里德伯原子阵列首次实验观测“平均拓扑相”</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，清华大学、北京量子信息科学研究院、合肥国家实验室等团队在 <code>Nature Physics</code> 在线发表研究，报告在里德伯原子阵列中观测到由结构无序诱导的多体相互作用平均对称保护拓扑相。</p></div>
       </section>
@@ -458,18 +417,15 @@
 <section class="field ">
         <div class="field-label">[NaturePhysics</div>
         <div class="field-content"><p>Average topological phase in a disordered Rydberg atom array](https://www.nature.com/articles/s41567-026-03271-x)</p></div>
-      </section>
-    </div>
+      </section></div>
   </article>
 <article class="story" id="story-2">
     <div class="story-topline">
       <span class="story-index">02</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>把长光路压进薄片：光学 spaceplate 压缩比做到 176</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，南京大学、渥太华大学、University of Rochester 与工业伙伴 Iridian Spectral Technologies 的团队在 <code>Nature Communications</code> 发表论文，实验展示了高空间压缩比 optical spaceplate。</p></div>
       </section>
@@ -496,18 +452,15 @@
 <section class="field ">
         <div class="field-label">[NatureCommunications</div>
         <div class="field-content"><p>Experimental demonstration of high space compression by optical spaceplates](https://www.nature.com/articles/s41467-026-71500-1)</p></div>
-      </section>
-    </div>
+      </section></div>
   </article>
 <article class="story" id="story-3">
     <div class="story-topline">
       <span class="story-index">03</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>倒置钙钛矿光伏再推高点：认证效率 27.03%，并给出长时稳定性数据</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，上海交通大学与山东师范大学团队在 <code>Nature Communications</code> 在线发表研究，报道共沉积倒置钙钛矿太阳能电池实现 <code>27.03%</code> 认证光电转换效率。</p></div>
       </section>
@@ -534,26 +487,21 @@
 <section class="field ">
         <div class="field-label">[NatureCommunications</div>
         <div class="field-content"><p>Co-deposited inverted perovskite photovoltaics towards 27% efficiency via vertical redistribution of self-assembled-molecules and in-situ crosslinking](https://www.nature.com/articles/s41467-026-72097-1)</p></div>
-      </section>
-    </div>
-  </article>
-    </div>
+      </section></div>
+  </article></div>
   </section>
 <section class="chapter" id="板块二-环境科学考研学术助力">
     <header class="chapter-head">
       <div class="chapter-kicker">Section</div>
       <h2>板块二：环境科学考研学术助力</h2>
     </header>
-    <div class="chapter-stories">
-      <article class="story" id="story-1">
+    <div class="chapter-stories"><article class="story" id="story-1">
     <div class="story-topline">
       <span class="story-index">01</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>太阳制氢不只看催化剂，还要看“每平方米产多少”：三维堆叠薄膜光催化器件出现新解法</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，台湾清华大学等团队在 <code>Nature Communications</code> 在线发表研究，提出可膨胀聚合物基体固定共轭聚合物光催化剂，并把薄膜做成可垂直堆叠的三维器件架构，用于提高单位土地面积的太阳制氢能力。</p></div>
       </section>
@@ -580,18 +528,15 @@
 <section class="field ">
         <div class="field-label">[NatureCommunications</div>
         <div class="field-content"><p>Vertically stacked immobilized photocatalyst devices towards land-efficient solar hydrogen production](https://www.nature.com/articles/s41467-026-71947-2)</p></div>
-      </section>
-    </div>
+      </section></div>
   </article>
 <article class="story" id="story-2">
     <div class="story-topline">
       <span class="story-index">02</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>在天然海水里做过氧化氢：电化学界面调控把电流密度推到工业级</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，大连理工大学与 Columbia University 合作团队在 <code>Nature Communications</code> 在线发表研究，报道通过阳离子调控酸性带电界面，实现天然海水中高效电合成过氧化氢。</p></div>
       </section>
@@ -618,18 +563,15 @@
 <section class="field ">
         <div class="field-label">[NatureCommunications</div>
         <div class="field-content"><p>Cation-tuned acidic electrified interface for hydrogen peroxide electrosynthesis with industrial-level current densities in natural seawater](https://www.nature.com/articles/s41467-026-72026-2)</p></div>
-      </section>
-    </div>
+      </section></div>
   </article>
 <article class="story" id="story-3">
     <div class="story-topline">
       <span class="story-index">03</span>
-      <span class="story-divider"></span>
-      <span class="story-kicker">重点事件</span>
+      <span class="story-rule"></span>
     </div>
     <h3>一篇很该记住的“降温文献”：森林供料 BECCS 可能几十年内反而增排</h3>
-    <div class="story-body">
-      <section class="field ">
+    <div class="story-body"><section class="field ">
         <div class="field-label">发生了什么</div>
         <div class="field-content"><p><code>2026年4月20日</code>，Princeton University、World Resources Institute、香港大学等机构作者在 <code>Nature Sustainability</code> 发表论文，系统评估“以现有森林木材为原料的 BECCS”到底能不能带来真正负排放。</p></div>
       </section>
@@ -656,34 +598,28 @@
 <section class="field ">
         <div class="field-label">[NatureSustainability</div>
         <div class="field-content"><p>Decades of increased emissions from forest-fuelled BECCS](https://www.nature.com/articles/s41893-026-01817-8)</p></div>
-      </section>
-    </div>
-  </article>
-    </div>
+      </section></div>
+  </article></div>
   </section>
       <section class="closing" id="memory">
     <header class="closing-head">
       <div class="chapter-kicker">Closing</div>
       <h2>今天最值得记住的 3 点</h2>
     </header>
-    <ol>
-      <li>1. <code>4月20日</code> 最硬的前沿信息，主要来自同行评审研究，而不是公司营销式发布。</li>
+    <ol><li>1. <code>4月20日</code> 最硬的前沿信息，主要来自同行评审研究，而不是公司营销式发布。</li>
 <li>2. 前沿材料与量子技术都在转向“真实世界条件”下的设计：无序、界面、空间约束、稳定性，不再是边角料，而是主战场。</li>
-<li>3. 环境与材料交叉的竞争力，已经不够靠“做出一个高性能材料”，还必须同时理解器件架构、系统效率和全生命周期碳后果。</li>
-    </ol>
+<li>3. 环境与材料交叉的竞争力，已经不够靠“做出一个高性能材料”，还必须同时理解器件架构、系统效率和全生命周期碳后果。</li></ol>
   </section>
       <section class="closing" id="advice">
     <header class="closing-head">
       <div class="chapter-kicker">Closing</div>
       <h2>对你当下学习路径的建议</h2>
     </header>
-    <ol>
-      <li>1. 先把基础课打牢到能读论文的程度，优先顺序建议是：物理化学、材料科学基础、无机化学、电化学。</li>
+    <ol><li>1. 先把基础课打牢到能读论文的程度，优先顺序建议是：物理化学、材料科学基础、无机化学、电化学。</li>
 <li>2. 从现在开始建立“表征语言”，至少熟悉 <code>SEM/TEM</code>、<code>XRD</code>、<code>XPS</code>、电化学测试、稳态/瞬态光谱分别回答什么问题。</li>
 <li>3. 读文献时养成三连问：机制是什么，规模化障碍是什么，放进系统后净环境收益是什么。</li>
 <li>4. 如果准备未来跨考材料方向，优先关注三条主线：新能源材料与器件、界面电化学、环境过程中的功能材料。</li>
-<li>5. 每周固定精读 <code>2</code> 篇顶刊论文，哪怕一开始很慢，也要训练自己从“看新闻标题”升级到“拆方法、看边界、记数字”。</li>
-    </ol>
+<li>5. 每周固定精读 <code>2</code> 篇顶刊论文，哪怕一开始很慢，也要训练自己从“看新闻标题”升级到“拆方法、看边界、记数字”。</li></ol>
   </section>
 
       <section class="archive" id="archive">
