@@ -76,10 +76,12 @@
       position: relative;
       z-index: 1;
       margin: 14px 0 10px;
-      font-size: clamp(32px, 10vw, 54px);
-      line-height: 0.92;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 700;
+      font-size: clamp(29px, 8.8vw, 50px);
+      line-height: 1.04;
       letter-spacing: -0.03em;
-      max-width: 6.6em;
+      max-width: 7.4em;
       text-wrap: balance;
     }
     .hero-date {
@@ -96,9 +98,9 @@
       position: relative;
       z-index: 1;
       margin: 0 0 10px;
-      max-width: 34rem;
-      font-size: 15px;
-      line-height: 1.82;
+      max-width: 31rem;
+      font-size: 14px;
+      line-height: 1.78;
       color: var(--muted);
     }
     .jumpbar {
@@ -164,17 +166,19 @@
     .closing-head h2,
     .archive-head h2 {
       margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 700;
       font-size: clamp(24px, 6vw, 34px);
-      line-height: 1.04;
+      line-height: 1.12;
       letter-spacing: -0.03em;
       text-wrap: balance;
     }
     .overview {
       font-size: 17px;
-      line-height: 1.95;
+      line-height: 2.08;
     }
     .overview p {
-      margin: 0 0 1em;
+      margin: 0 0 1.22em;
     }
     .overview p:last-child {
       margin-bottom: 0;
@@ -226,19 +230,21 @@
     }
     .story h3 {
       margin: 0 0 14px;
-      font-size: clamp(24px, 7vw, 36px);
-      line-height: 1.08;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 700;
+      font-size: clamp(24px, 6.2vw, 33px);
+      line-height: 1.24;
       letter-spacing: -0.035em;
       text-wrap: balance;
     }
     .story-body {
       display: grid;
-      gap: 16px;
+      gap: 20px;
     }
     .field {
       display: grid;
-      gap: 8px;
-      padding-bottom: 14px;
+      gap: 10px;
+      padding-bottom: 18px;
       border-bottom: 1px dashed rgba(21, 32, 38, 0.11);
     }
     .field:last-child {
@@ -254,11 +260,11 @@
     }
     .field-content {
       font-size: 16px;
-      line-height: 1.95;
+      line-height: 2.06;
       color: var(--ink);
     }
     .field-content p {
-      margin: 0 0 0.9em;
+      margin: 0 0 1.08em;
     }
     .field-content p:last-child {
       margin-bottom: 0;
@@ -328,6 +334,29 @@
         padding-right: 24px;
       }
     }
+    @media (max-width: 720px) {
+      .hero h1 {
+        font-size: clamp(28px, 8vw, 40px);
+        max-width: 8.5em;
+      }
+      .hero p {
+        font-size: 13px;
+        line-height: 1.72;
+      }
+      .overview {
+        font-size: 16px;
+        line-height: 2.02;
+      }
+      .story h3 {
+        font-size: clamp(23px, 6.6vw, 29px);
+      }
+      .field-content,
+      .closing li,
+      .archive li {
+        font-size: 15px;
+        line-height: 2;
+      }
+    }
   </style>
 </head>
 <body>
@@ -336,8 +365,8 @@
       <div class="eyebrow">Daily Frontier Brief</div>
       <h1>每日前沿摘要 2026-04-20</h1>
       <div class="hero-date">2026-04-20</div>
-      <p></p>
-<p>按北京时间 <code>2026年4月20日</code> 这一天的权威一手来源来看，真正值得写进简报的，不是热闹的产品营销，而是几项已经通过同行评审、正式在线披露的硬核研究。科技前沿这边，量子系统开始把“无序”和“缺陷”从麻烦变成可利用对象，超薄光学器件向系统级压缩迈进，钙钛矿光伏则继续逼近更现实的效率与稳定性门槛。环境与材料交叉这边，信号同样清晰：未来竞争力不只来自做出“更活跃的材料”，还来自把界面电化学、器件空间效率、全生命周期碳核算三件事同时做好。今天更像一份研究雷达，而不是新闻热榜。</p>
+      <p>面向手机端长文阅读优化的每日科技网页摘要。</p>
+      <p>页首只保留阅读定位，不再重复“今日总览”的正文内容；真正的判断与趋势观察放在下面的总览区展开。</p>
     </header>
 
     <nav class="jumpbar" aria-label="页面导航">
